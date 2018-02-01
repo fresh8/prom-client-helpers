@@ -1,0 +1,30 @@
+{
+  "name": "@fresh8/prom-client-timer-unit",
+  "version": "0.0.1",
+  "description": "A helper function to help record time in other units than seconds.",
+  "main": "index.js",
+  "dependencies": {
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fresh8/prom-client-timer-unit.git"
+  },
+  "author": "Fresh8",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/fresh8/prom-client-timer-unit/issues"
+  },
+  "homepage": "https://github.com/fresh8/prom-client-timer-unit#readme"
+  "engines": {
+    "node": ">=6.9.0",
+    "npm": ">=5"
+  },
+  "bugs": {
+    "url": "https://github.com/fresh8/prom-client-timer-unit/issues"
+  },
+  "homepage": "https://github.com/fresh8/prom-client-timer-unit",
+}
