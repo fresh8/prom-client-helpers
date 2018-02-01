@@ -17,7 +17,7 @@ const startTimer = require('@fresh8/prom-client-timer-unit')
 
 const stopTimer = startTimer(myMetric, 1e-3)
 // [...] your code doing things
-stopTimer() //will calculate the time elapsed and register it in `myMetric`
+stopTimer() // will calculate the time elapsed and register it in `myMetric`
 ```
 
 #### Typescript
@@ -28,22 +28,22 @@ import * as startTimer from '@fresh8/prom-client-timer-unit'
 const myMetric = promClient.Histogram()
 const stopTimer = startTimer(myMetric, 1e-3)
 // [...] your code doing things
-stopTimer() //will calculate the time elapsed and register it in `myMetric`
+stopTimer() // will calculate the time elapsed and register it in `myMetric`
 ```
 
 ### API
 #### startTimer(metric, factor, labels)
-* **metric** : your metric straight from `prom-client` (e.g: `new promClient.Histogram(opts)`)
+* **metric** : The `prom-client` metric, e.g: `new promClient.Histogram(opts)`
 * **factor** (optional): The factor to be applied to the observed number of seconds. Examples: `1e-3` for milliseconds, `60` for minutes. Defaults to `1`
-* **labels** (optional): labels to apply to the observation. This is to follow the same signature as the original `startTimer` function in `prom-client`. Defaults to `{}`
+* **labels** (optional): Labels to apply to the observation. This is to follow the same signature as the original `startTimer` function in `prom-client`. Defaults to `{}`
 * returns: stopTimer
 
-Start counting time using `process.hrtime`.
+Starts counting time using `process.hrtime`.
 
 #### stopTimer(labels)
-* **labels** : labels to apply to the observation. They will be merged with the labels given to `startTimer` (if any). Defaults to `{}`
+* **labels** : Labels to apply to the observation. They will be merged with the labels given to `startTimer` (if any). Defaults to `{}`
 
-Stops the timer and record the elapsed time in the metric given to `startTimer`, dividing the default time (in seconds) by the provided `factor`.
+Stops the timer and record the elapsed time in seconds divided by `factor`.
 
 ## Credits
 Implementation very heavily inspired from the [original in prom-client](https://github.com/siimon/prom-client/blob/4c5b6c73ca5bea6889e77f61ef4b99b5e0250d7a/lib/summary.js#L180)
