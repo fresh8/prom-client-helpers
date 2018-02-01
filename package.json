@@ -46,13 +46,11 @@
       ]
     },
     "extension": [
-      ".ts"
     ],
     "exclude": [
       "**/*.d.ts"
     ],
     "require": [
-      "ts-node/register"
     ],
     "reporter": [
       "html",
