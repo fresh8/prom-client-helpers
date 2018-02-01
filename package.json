@@ -73,5 +73,6 @@
   "engines": {
     "node": ">=6.9.0",
     "npm": ">=5"
-  }
+  },
+  "typings": "index.d.ts"
 }
