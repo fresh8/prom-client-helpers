@@ -1,6 +1,6 @@
 {
   "name": "@fresh8/prom-client-timer-unit",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A helper function to help record time in other units than seconds.",
   "main": "index.js",
   "dependencies": {},
