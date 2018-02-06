@@ -7,7 +7,7 @@ declare function startTimer(
 ): stopTimer
 declare function stopTimer(
   labels?: PromClient.labelValues
-): void
+): { elapsed: number, labels: PromClient.labelValues }
 
 declare namespace startTimer {
 }

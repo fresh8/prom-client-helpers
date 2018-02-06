@@ -13,5 +13,6 @@ module.exports = function startTimer(metric, factor = 1, startLabels = {}) {
 
     const labels = Object.assign({}, startLabels, endLabels)
     metric.observe(labels, elapsed)
+    return { elapsed, labels }
   }
 }
