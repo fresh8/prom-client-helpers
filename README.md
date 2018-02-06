@@ -42,6 +42,9 @@ Starts counting time using `process.hrtime`.
 
 #### stopTimer(labels)
 * **labels** : Labels to apply to the observation. They will be merged with the labels given to `startTimer` (if any). Defaults to `{}`
+* returns: { labels, elapsed }. This is in case you want to re-use those values in something else than prometheus itself.
+** labels: the result of combining labels given to `startTimer` and `stopTimer`
+** elapsed: the time measured by the timer, in the correct unit.
 
 Stops the timer and record the elapsed time in seconds divided by `factor`.
 

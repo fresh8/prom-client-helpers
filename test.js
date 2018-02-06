@@ -78,9 +78,19 @@ describe('startTimer', () => {
 
     it('applies both start and end labels', () => {
       const metric = new MetricMock()
-      const stop = startTimer(metric, null, { start: 'yup' })
+      const stop = startTimer(metric, undefined, { start: 'yup' })
       stop({ end: 'already' })
       expect(metric.observed[0]).to.deep.equal({ start: 'yup', end: 'already' })
+    })
+
+    it('returns the elapsed time and labels', () => {
+      const metric = new MetricMock()
+      const stop = startTimer(metric, undefined, { start: 'yup' })
+      const result = stop({ end: 'already' })
+      expect(result).to.deep.equal({
+        elapsed: metric.observed[1],
+        labels: metric.observed[0]
+      })
     })
   })
 })
